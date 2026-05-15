@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>STEINS;SUBS</title>
   <link rel="stylesheet" href="styles.css"/>
-</head><link rel="stylesheet" href="styles.css">
+</head>
 
 <body>
 
@@ -37,13 +37,17 @@
     </h2>
 
     <p class="desc">
-      Eksperymentalna organizacja zajmująca się tłumaczeniem niszowych serii anime,
-      visual novel oraz materiałów science fiction.
+      Eksperymentalna organizacja zajmująca się tłumaczeniem niszowych serii anime i visual novel.
     </p>
 
     <div class="buttons">
-      <button>Aktualne projekty</button>
-      <button>Discord</button>
+      <a class="btn" href="#projekty">Aktualne projekty</a>
+
+      <a class="btn secondary"
+         href="https://discord.com"
+         target="_blank">
+        Discord
+      </a>
     </div>
   </div>
 
@@ -72,59 +76,102 @@
 
     <div class="log">
       <p>[12:04] Patchowanie napisów...</p>
-      <p>[12:08] Synchronizacja timingów...</p>
       <p>[12:10] Release v1.2</p>
-      <p>[12:11] Stabilizacja osi czasu</p>
+      <p>[12:11] Timeline stable</p>
     </div>
   </div>
 </section>
 
 <section id="projekty" class="container section">
+
   <h3>Projekty</h3>
 
   <div class="grid">
+
     <div class="card">
       <h4>Chaos;Head</h4>
       <span>W toku</span>
       <div class="bar"><div class="fill w72"></div></div>
-      <p>Projekt tłumaczeniowy z ręczną korektą i adaptacją.</p>
+
+      <p>Projekt tłumaczeniowy.</p>
+
+      <a class="download"
+         href="files/chaoshead.zip"
+         download>
+         Pobierz patch
+      </a>
     </div>
 
     <div class="card">
       <h4>Serial Experiments Lain</h4>
       <span>Gotowe</span>
       <div class="bar"><div class="fill w100"></div></div>
-      <p>Projekt tłumaczeniowy z ręczną korektą i adaptacją.</p>
+
+      <p>Pełne tłumaczenie.</p>
+
+      <a class="download"
+         href="files/lain.zip"
+         download>
+         Pobierz tłumaczenie
+      </a>
     </div>
 
     <div class="card">
       <h4>Ergo Proxy</h4>
       <span>Tłumaczenie</span>
       <div class="bar"><div class="fill w41"></div></div>
-      <p>Projekt tłumaczeniowy z ręczną korektą i adaptacją.</p>
+
+      <p>W trakcie pracy.</p>
+
+      <a class="download"
+         href="files/ergoproxy.zip"
+         download>
+         Pobierz preview
+      </a>
     </div>
+
   </div>
 </section>
 
 <section id="o-nas" class="container section two-col">
+
   <div class="box">
     <h3>O projekcie</h3>
     <p>
-      Strona inspirowana Steins;Gate. Skupiona na tłumaczeniach anime i VN.
+      Fanowskie tłumaczenia anime i VN inspirowane Steins;Gate.
     </p>
   </div>
 
   <div class="box">
     <h3>Status</h3>
-    <p>Timeline: Alpha</p>
     <p>Encoding: UTF-8</p>
     <p>System: Future Gadget Lab</p>
   </div>
+
+</section>
+
+<section id="kontakt" class="container section">
+
+  <h3>Kontakt</h3>
+
+  <div class="box">
+
+    <p>Email:</p>
+    <a href="mailto:steinsubs@example.com">steinsubs@example.com</a>
+
+    <p style="margin-top: 20px;">Discord:</p>
+    <a href="https://discord.com"
+       target="_blank">
+       Dołącz do serwera
+    </a>
+
+  </div>
+
 </section>
 
 </main>
 
-<footer id="kontakt" class="footer">
+<footer class="footer">
   STEINS;SUBS © 2026
 </footer>
 
