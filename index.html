@@ -2,272 +2,131 @@
 <html lang="pl">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>STEINS;SUBS</title>
-  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="styles.css"/>
 </head>
 
-<body class="min-h-screen bg-black text-green-400 overflow-hidden relative font-mono">
+<body>
 
-  <!-- background effects -->
-  <div class="absolute inset-0 opacity-10 pointer-events-none">
-    <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(0,255,120,0.15),transparent_70%)]"></div>
-  </div>
-
-  <div class="absolute inset-0 pointer-events-none opacity-20">
-    <div class="h-full w-full bg-[linear-gradient(to_bottom,transparent_50%,rgba(0,255,100,0.03)_51%)] bg-[length:100%_4px]"></div>
-  </div>
-
-  <!-- HEADER -->
-  <header class="border-b border-green-500/30 backdrop-blur-sm sticky top-0 z-50 bg-black/80">
-    <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-
-      <div>
-        <h1 class="text-3xl tracking-[0.3em] font-bold text-green-300">
-          LABMEM 004
-        </h1>
-        <p class="text-xs text-green-500 mt-1 tracking-widest">
-          STEINS;SUBS TRANSLATION DIVISION
-        </p>
-      </div>
-
-      <nav class="flex gap-6 text-sm uppercase tracking-widest">
-        <a href="#projekty" class="hover:text-green-200 transition">Projekty</a>
-        <a href="#o-nas" class="hover:text-green-200 transition">O nas</a>
-        <a href="#kontakt" class="hover:text-green-200 transition">Kontakt</a>
-      </nav>
-
+<header class="header">
+  <div class="container header-inner">
+    <div>
+      <h1 class="title">LABMEM 004</h1>
+      <p class="subtitle">STEINS;SUBS TRANSLATION DIVISION</p>
     </div>
-  </header>
 
-  <main>
+    <nav class="nav">
+      <a href="#projekty">Projekty</a>
+      <a href="#o-nas">O nas</a>
+      <a href="#kontakt">Kontakt</a>
+    </nav>
+  </div>
+</header>
 
-    <!-- HERO -->
-    <section class="max-w-7xl mx-auto px-6 py-28 grid lg:grid-cols-2 gap-16 items-center">
+<main>
+
+<section class="hero container">
+  <div>
+    <div class="tag">EL PSY KONGROO</div>
+
+    <h2 class="big">
+      POLSKIE<br/>
+      SPOLSZCZENIA<br/>
+      ANIME
+    </h2>
+
+    <p class="desc">
+      Eksperymentalna organizacja zajmująca się tłumaczeniem niszowych serii anime,
+      visual novel oraz materiałów science fiction.
+    </p>
+
+    <div class="buttons">
+      <button>Aktualne projekty</button>
+      <button>Discord</button>
+    </div>
+  </div>
+
+  <div class="panel">
+    <div class="panel-top">
+      <span>DIVERGENCE METER</span>
+      <span class="meter">1.048596</span>
+    </div>
+
+    <div class="stats">
+      <div>
+        <div class="row"><span>Aktywne projekty</span><span>03</span></div>
+        <div class="bar"><div class="fill w75"></div></div>
+      </div>
 
       <div>
-        <div class="inline-block border border-green-500/40 px-3 py-1 text-xs tracking-[0.3em] mb-6 text-green-500">
-          EL PSY KONGROO
-        </div>
-
-        <h2 class="text-6xl md:text-7xl font-black leading-none text-green-200">
-          POLSKIE<br />SPOLSZCZENIA<br />ANIME
-        </h2>
-
-        <p class="mt-8 text-green-500 leading-8 max-w-xl text-lg">
-          Eksperymentalna organizacja zajmująca się tłumaczeniem niszowych serii anime,
-          visual novel oraz materiałów powiązanych z science fiction.
-        </p>
-
-        <div class="mt-10 flex flex-wrap gap-4">
-          <button class="px-6 py-3 border border-green-400 bg-green-500/10 hover:bg-green-500/20 transition tracking-widest uppercase text-sm rounded-2xl shadow-lg shadow-green-500/10">
-            Aktualne projekty
-          </button>
-
-          <button class="px-6 py-3 border border-green-900 hover:border-green-500 transition tracking-widest uppercase text-sm rounded-2xl text-green-600">
-            Discord
-          </button>
-        </div>
+        <div class="row"><span>Odcinki</span><span>148</span></div>
+        <div class="bar"><div class="fill w92"></div></div>
       </div>
 
-      <!-- PANEL -->
-      <div class="relative">
-        <div class="border border-green-500/30 rounded-3xl p-8 bg-black/70 backdrop-blur-xl shadow-2xl shadow-green-500/10">
-
-          <div class="flex items-center justify-between border-b border-green-500/20 pb-4">
-            <span class="text-sm tracking-widest text-green-500">DIVERGENCE METER</span>
-            <span class="text-green-300 text-xl">1.048596</span>
-          </div>
-
-          <div class="mt-8 space-y-6">
-
-            <div>
-              <div class="flex justify-between text-sm mb-2">
-                <span>Aktywne projekty</span>
-                <span>03</span>
-              </div>
-              <div class="h-2 bg-green-950 rounded-full overflow-hidden">
-                <div class="h-full w-[75%] bg-green-400"></div>
-              </div>
-            </div>
-
-            <div>
-              <div class="flex justify-between text-sm mb-2">
-                <span>Przetłumaczone odcinki</span>
-                <span>148</span>
-              </div>
-              <div class="h-2 bg-green-950 rounded-full overflow-hidden">
-                <div class="h-full w-[92%] bg-green-500"></div>
-              </div>
-            </div>
-
-            <div>
-              <div class="flex justify-between text-sm mb-2">
-                <span>Stabilność timeline</span>
-                <span>51%</span>
-              </div>
-              <div class="h-2 bg-green-950 rounded-full overflow-hidden">
-                <div class="h-full w-[51%] bg-green-300"></div>
-              </div>
-            </div>
-
-          </div>
-
-          <div class="mt-10 border border-green-500/20 rounded-2xl p-5 bg-black/40">
-            <div class="text-xs tracking-[0.3em] text-green-600 mb-3">
-              SYSTEM LOG
-            </div>
-
-            <div class="space-y-2 text-sm text-green-400/80">
-              <p>[12:04] Patchowanie napisów...</p>
-              <p>[12:08] Synchronizacja timingów...</p>
-              <p>[12:10] Wysłano release v1.2</p>
-              <p>[12:11] Oś czasu ustabilizowana.</p>
-            </div>
-          </div>
-
-        </div>
+      <div>
+        <div class="row"><span>Stabilność</span><span>51%</span></div>
+        <div class="bar"><div class="fill w51"></div></div>
       </div>
+    </div>
 
-    </section>
+    <div class="log">
+      <p>[12:04] Patchowanie napisów...</p>
+      <p>[12:08] Synchronizacja timingów...</p>
+      <p>[12:10] Release v1.2</p>
+      <p>[12:11] Stabilizacja osi czasu</p>
+    </div>
+  </div>
+</section>
 
-    <!-- PROJECTS -->
-    <section id="projekty" class="max-w-7xl mx-auto px-6 py-20">
+<section id="projekty" class="container section">
+  <h3>Projekty</h3>
 
-      <div class="mb-12">
-        <p class="text-green-600 tracking-[0.3em] text-xs mb-4">
-          ACTIVE TRANSLATION SUBJECTS
-        </p>
-        <h3 class="text-4xl font-bold text-green-200">Projekty</h3>
-      </div>
+  <div class="grid">
+    <div class="card">
+      <h4>Chaos;Head</h4>
+      <span>W toku</span>
+      <div class="bar"><div class="fill w72"></div></div>
+      <p>Projekt tłumaczeniowy z ręczną korektą i adaptacją.</p>
+    </div>
 
-      <div class="grid md:grid-cols-2 xl:grid-cols-3 gap-8">
+    <div class="card">
+      <h4>Serial Experiments Lain</h4>
+      <span>Gotowe</span>
+      <div class="bar"><div class="fill w100"></div></div>
+      <p>Projekt tłumaczeniowy z ręczną korektą i adaptacją.</p>
+    </div>
 
-        <div class="border border-green-500/20 bg-black/60 rounded-3xl p-6 hover:border-green-400 transition shadow-xl shadow-green-500/5">
-          <div class="flex justify-between items-start">
-            <h4 class="text-2xl text-green-200 font-bold">Chaos;Head</h4>
-            <span class="text-xs border border-green-500/30 px-3 py-1 rounded-full text-green-500 uppercase tracking-widest">
-              W toku
-            </span>
-          </div>
+    <div class="card">
+      <h4>Ergo Proxy</h4>
+      <span>Tłumaczenie</span>
+      <div class="bar"><div class="fill w41"></div></div>
+      <p>Projekt tłumaczeniowy z ręczną korektą i adaptacją.</p>
+    </div>
+  </div>
+</section>
 
-          <div class="mt-8">
-            <div class="flex justify-between text-sm mb-2 text-green-500">
-              <span>Postęp</span>
-              <span>72%</span>
-            </div>
-            <div class="h-2 bg-green-950 rounded-full overflow-hidden">
-              <div class="h-full bg-green-400" style="width:72%"></div>
-            </div>
-          </div>
+<section id="o-nas" class="container section two-col">
+  <div class="box">
+    <h3>O projekcie</h3>
+    <p>
+      Strona inspirowana Steins;Gate. Skupiona na tłumaczeniach anime i VN.
+    </p>
+  </div>
 
-          <p class="mt-6 text-green-500 leading-7 text-sm">
-            Eksperymentalny projekt tłumaczeniowy oparty na ręcznej korekcie,
-            synchronizacji oraz adaptacji terminologii.
-          </p>
-        </div>
+  <div class="box">
+    <h3>Status</h3>
+    <p>Timeline: Alpha</p>
+    <p>Encoding: UTF-8</p>
+    <p>System: Future Gadget Lab</p>
+  </div>
+</section>
 
-        <div class="border border-green-500/20 bg-black/60 rounded-3xl p-6 hover:border-green-400 transition shadow-xl shadow-green-500/5">
-          <div class="flex justify-between items-start">
-            <h4 class="text-2xl text-green-200 font-bold">Serial Experiments Lain</h4>
-            <span class="text-xs border border-green-500/30 px-3 py-1 rounded-full text-green-500 uppercase tracking-widest">
-              Gotowe
-            </span>
-          </div>
+</main>
 
-          <div class="mt-8">
-            <div class="flex justify-between text-sm mb-2 text-green-500">
-              <span>Postęp</span>
-              <span>100%</span>
-            </div>
-            <div class="h-2 bg-green-950 rounded-full overflow-hidden">
-              <div class="h-full bg-green-400" style="width:100%"></div>
-            </div>
-          </div>
-
-          <p class="mt-6 text-green-500 leading-7 text-sm">
-            Eksperymentalny projekt tłumaczeniowy oparty na ręcznej korekcie,
-            synchronizacji oraz adaptacji terminologii.
-          </p>
-        </div>
-
-        <div class="border border-green-500/20 bg-black/60 rounded-3xl p-6 hover:border-green-400 transition shadow-xl shadow-green-500/5">
-          <div class="flex justify-between items-start">
-            <h4 class="text-2xl text-green-200 font-bold">Ergo Proxy</h4>
-            <span class="text-xs border border-green-500/30 px-3 py-1 rounded-full text-green-500 uppercase tracking-widest">
-              Tłumaczenie
-            </span>
-          </div>
-
-          <div class="mt-8">
-            <div class="flex justify-between text-sm mb-2 text-green-500">
-              <span>Postęp</span>
-              <span>41%</span>
-            </div>
-            <div class="h-2 bg-green-950 rounded-full overflow-hidden">
-              <div class="h-full bg-green-400" style="width:41%"></div>
-            </div>
-          </div>
-
-          <p class="mt-6 text-green-500 leading-7 text-sm">
-            Eksperymentalny projekt tłumaczeniowy oparty na ręcznej korekcie,
-            synchronizacji oraz adaptacji terminologii.
-          </p>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- ABOUT -->
-    <section id="o-nas" class="max-w-7xl mx-auto px-6 py-20 grid lg:grid-cols-2 gap-10">
-
-      <div class="border border-green-500/20 rounded-3xl p-8 bg-black/60">
-        <p class="text-green-600 tracking-[0.3em] text-xs mb-4">ORGANIZATION DATA</p>
-        <h3 class="text-4xl text-green-200 font-bold mb-6">O projekcie</h3>
-
-        <p class="text-green-500 leading-8">
-          Strona inspirowana estetyką interfejsów z anime Steins;Gate.
-          Projekt skupia się na tłumaczeniach anime, visual novel oraz archiwizacji
-          niszowych serii science fiction.
-        </p>
-      </div>
-
-      <div class="border border-green-500/20 rounded-3xl p-8 bg-black/60">
-        <p class="text-green-600 tracking-[0.3em] text-xs mb-4">STATUS REPORT</p>
-
-        <div class="space-y-4 text-green-400">
-
-          <div class="flex justify-between border-b border-green-500/10 pb-3">
-            <span>Timeline</span>
-            <span>Alpha</span>
-          </div>
-
-          <div class="flex justify-between border-b border-green-500/10 pb-3">
-            <span>Release Frequency</span>
-            <span>Niestała</span>
-          </div>
-
-          <div class="flex justify-between border-b border-green-500/10 pb-3">
-            <span>Encoding</span>
-            <span>UTF-8</span>
-          </div>
-
-          <div class="flex justify-between border-b border-green-500/10 pb-3">
-            <span>System</span>
-            <span>Future Gadget Lab</span>
-          </div>
-
-        </div>
-      </div>
-
-    </section>
-
-  </main>
-
-  <!-- FOOTER -->
-  <footer id="kontakt" class="border-t border-green-500/20 mt-20 py-10 px-6 text-center text-green-600 text-sm">
-    <p>STEINS;SUBS © 2026 — Future Gadget Translation Laboratory</p>
-  </footer>
+<footer id="kontakt" class="footer">
+  STEINS;SUBS © 2026
+</footer>
 
 </body>
 </html>
