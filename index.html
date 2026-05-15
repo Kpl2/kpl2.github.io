@@ -11,8 +11,9 @@
 
 <header class="header">
   <div class="container header-inner">
+
     <div>
-      <h1 class="title">LABMEM 004</h1>
+      <h1 class="title glitch" data-text="LABMEM 004">LABMEM 004</h1>
       <p class="subtitle">STEINS;SUBS TRANSLATION DIVISION</p>
     </div>
 
@@ -21,12 +22,14 @@
       <a href="#o-nas">O nas</a>
       <a href="#kontakt">Kontakt</a>
     </nav>
+
   </div>
 </header>
 
 <main>
 
 <section class="hero container">
+
   <div>
     <div class="tag">EL PSY KONGROO</div>
 
@@ -37,27 +40,24 @@
     </h2>
 
     <p class="desc">
-      Eksperymentalna organizacja zajmująca się tłumaczeniem niszowych serii anime i visual novel.
+      Eksperymentalna organizacja tłumaczeń anime i visual novel.
     </p>
 
     <div class="buttons">
-      <a class="btn" href="#projekty">Aktualne projekty</a>
-
-      <a class="btn secondary"
-         href="https://discord.com"
-         target="_blank">
-        Discord
-      </a>
+      <a class="btn" href="#projekty">Projekty</a>
+      <a class="btn secondary" href="https://discord.com" target="_blank">Discord</a>
     </div>
   </div>
 
   <div class="panel">
+
     <div class="panel-top">
       <span>DIVERGENCE METER</span>
       <span class="meter">1.048596</span>
     </div>
 
     <div class="stats">
+
       <div>
         <div class="row"><span>Aktywne projekty</span><span>03</span></div>
         <div class="bar"><div class="fill w75"></div></div>
@@ -72,14 +72,19 @@
         <div class="row"><span>Stabilność</span><span>51%</span></div>
         <div class="bar"><div class="fill w51"></div></div>
       </div>
+
     </div>
 
-    <div class="log">
+    <div class="log" id="log">
       <p>[12:04] Patchowanie napisów...</p>
       <p>[12:10] Release v1.2</p>
       <p>[12:11] Timeline stable</p>
     </div>
+
+    <button class="btn small" onclick="addLog()">Nowy log</button>
+
   </div>
+
 </section>
 
 <section id="projekty" class="container section">
@@ -92,54 +97,35 @@
       <h4>Chaos;Head</h4>
       <span>W toku</span>
       <div class="bar"><div class="fill w72"></div></div>
-
       <p>Projekt tłumaczeniowy.</p>
-
-      <a class="download"
-         href="files/chaoshead.zip"
-         download>
-         Pobierz patch
-      </a>
+      <a class="download" href="files/chaoshead.zip" download>Pobierz patch</a>
     </div>
 
     <div class="card">
       <h4>Serial Experiments Lain</h4>
       <span>Gotowe</span>
       <div class="bar"><div class="fill w100"></div></div>
-
       <p>Pełne tłumaczenie.</p>
-
-      <a class="download"
-         href="files/lain.zip"
-         download>
-         Pobierz tłumaczenie
-      </a>
+      <a class="download" href="files/lain.zip" download>Pobierz</a>
     </div>
 
     <div class="card">
       <h4>Ergo Proxy</h4>
       <span>Tłumaczenie</span>
       <div class="bar"><div class="fill w41"></div></div>
-
-      <p>W trakcie pracy.</p>
-
-      <a class="download"
-         href="files/ergoproxy.zip"
-         download>
-         Pobierz preview
-      </a>
+      <p>W trakcie.</p>
+      <a class="download" href="files/ergoproxy.zip" download>Pobierz preview</a>
     </div>
 
   </div>
+
 </section>
 
 <section id="o-nas" class="container section two-col">
 
   <div class="box">
     <h3>O projekcie</h3>
-    <p>
-      Fanowskie tłumaczenia anime i VN inspirowane Steins;Gate.
-    </p>
+    <p>Fanowskie tłumaczenia anime i VN inspirowane Steins;Gate.</p>
   </div>
 
   <div class="box">
@@ -159,11 +145,8 @@
     <p>Email:</p>
     <a href="mailto:steinsubs@example.com">steinsubs@example.com</a>
 
-    <p style="margin-top: 20px;">Discord:</p>
-    <a href="https://discord.com"
-       target="_blank">
-       Dołącz do serwera
-    </a>
+    <p style="margin-top:15px;">Discord:</p>
+    <a href="https://discord.com" target="_blank">Serwer Discord</a>
 
   </div>
 
@@ -174,6 +157,26 @@
 <footer class="footer">
   STEINS;SUBS © 2026
 </footer>
+
+<script>
+let value = 1.048596;
+
+setInterval(() => {
+  value += (Math.random() - 0.5) * 0.0002;
+  const meter = document.querySelector(".meter");
+  if (meter) meter.textContent = value.toFixed(6);
+}, 1200);
+
+function addLog() {
+  const log = document.getElementById("log");
+  const time = new Date().toLocaleTimeString();
+
+  const p = document.createElement("p");
+  p.textContent = `[${time}] Nowy wpis systemowy...`;
+
+  log.appendChild(p);
+}
+</script>
 
 </body>
 </html>
