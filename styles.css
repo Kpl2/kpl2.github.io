@@ -222,5 +222,56 @@ body {
   .grid,
   .two-col {
     grid-template-columns: 1fr;
+
+    /* CRT / scanlines */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: repeating-linear-gradient(
+    to bottom,
+    rgba(0,255,100,0.03),
+    rgba(0,255,100,0.03) 1px,
+    transparent 2px,
+    transparent 4px
+  );
+  pointer-events: none;
+  mix-blend-mode: screen;
+}
+
+/* subtle flicker */
+@keyframes flicker {
+  0% { opacity: 0.95; }
+  50% { opacity: 1; }
+  100% { opacity: 0.92; }
+}
+
+body {
+  animation: flicker 3s infinite;
+}
+
+/* glitch text */
+.glitch {
+  position: relative;
+}
+
+.glitch::before,
+.glitch::after {
+  content: attr(data-text);
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0.8;
+}
+
+.glitch::before {
+  color: #0ff;
+  transform: translate(1px, 0);
+}
+
+.glitch::after {
+  color: #f0f;
+  transform: translate(-1px, 0);
+}
   }
 }
